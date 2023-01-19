@@ -26,8 +26,8 @@ body {
 
 #root {
   background: white;
-  background: radial-gradient(ellipse at -200% 60%, rgba(209, 209, 209, 0.48) 22%, rgba(182, 182, 182, 0) 71%),
-    linear-gradient(160deg, rgb(233, 233, 233), hsl(0, 0%, 100%) 100%);
+  /* background: radial-gradient(ellipse at -200% 60%, rgba(209, 209, 209, 0.48) 22%, rgba(182, 182, 182, 0) 71%),
+    linear-gradient(160deg, #e9e9e9, hsl(0, 0%, 100%) 100%); */
   overflow: auto;
 }
 

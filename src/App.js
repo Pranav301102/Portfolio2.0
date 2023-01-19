@@ -2,21 +2,18 @@ import * as THREE from "three"
 import { Suspense, Children, useLayoutEffect, useMemo, useRef } from "react"
 import { Canvas, useThree, useFrame } from "@react-three/fiber"
 import { ContactShadows, Loader, useTexture,useScroll,ScrollControls,Scroll} from "@react-three/drei"
-import { useTransition } from "@react-spring/core"
+import { useSpring } from "@react-spring/core"
 import { a } from "@react-spring/three"
 
 import DistortionMaterial from "./DistortionMaterial"
-import { Container, Jumbo, Nav, Box, Line, Cover } from "./Styles"
+import { Container, Nav, Box, Line, Cover } from "./Styles"
+import SphereTxt from "./SphereText/SphereText"
 
 const square = new THREE.PlaneBufferGeometry(20,43,254,254)
 
 const material1 = new DistortionMaterial()
 
-const jumbo = {
-  "/": ["The sun", "is its father."],
-  "/knot": ["The moon", "its mother."],
-  "/bomb": ["The wind", "hath carried it", "in its belly."],
-}
+
 
 function Shape({ geometry, material, args, textures, opacity, color, shadowScale = [9, 1.5, 1], ...props }) {
   const ref = useRef()
@@ -64,18 +61,36 @@ function Shapes() {
   )
 }
 
-function Text({ children, opacity }) {
+function Text({ opacity }) {
   return (
     <Box style={{ opacity }}>
       <h1>Hey</h1>
       <h1>I am Pranav</h1>
-      {Children.toArray(children).map((text, index) => (
-        <Line key={index} style={{ transform: opacity.to((t) => `translate3d(0,${index * -50 + (1 - t) * ((1 + index) * 40)}px,0)`) }}>
-          <div></div>
-          <Cover style={{ transform: opacity.to((t) => `translate3d(0,${t * 100}%,0) rotateZ(-10deg)`) }} />
-        </Line>
-      ))}
     </Box>
+  )
+}
+
+function Background({ color }) {
+  const scroll = useScroll()
+  const tcolor = new THREE.Color()
+  useFrame(( gl ) => {
+    
+    if(scroll.offset<0.10){
+      gl.scene.background.lerp(tcolor.set( "rgb(255, 255, 255,1)"), 0.1)
+    }
+    else if(scroll.offset>0.10 && scroll.offset<0.25){
+      gl.scene.background.lerp(tcolor.set( "rgba(227,253,253,1)"), 0.05)
+    }
+    else if(scroll.offset>0.25 && scroll.offset<0.85){
+      gl.scene.background.lerp(tcolor.set( "rgba(0,34,77,1)"), 0.05)
+    }
+    else{
+      gl.scene.background.lerp(tcolor.set( "rgb(0, 0, 0,2)"), 0.1)
+    }
+    
+  });
+  return (
+    <color attach="background" args={[color]} />
   )
 }
 
@@ -84,29 +99,30 @@ export default function App() {
   // Animated shape props
   const [location] = "/"
   // Animated shape props
-  const transition = useTransition(location, {
-    from: { position: [0, 0, -20], rotation: [0, Math.PI, 0], scale: [0, 0, 0], opacity: 0 },
-    enter: { position: [0, 0, 0], rotation: [0, 0, 0], scale: [1, 1, 1], opacity: 1 },
-    leave: { position: [0, 0, -10], rotation: [0, -Math.PI, 0], scale: [0, 0, 0], opacity: 0 },
-    config: () => (n) => n === "opacity" && { friction: 60 },
-  })
+  
   return (
     <>
       <Container>
-        <Jumbo>
-          {transition((style, location) => (
-            <Text open={true} t={style.t} opacity={style.opacity} children={jumbo[location]} />
-          ))}
-        </Jumbo>
+           
+        <Text opacity={[1]}/>
+          
+        
       </Container>
-      <Canvas camera={{ position: [0, 0, 20], fov: 50 }}>
+      <Canvas  camera={{ position: [0, 0, 20], fov: 50 }}>
+      <ScrollControls damping={4} pages={4.8}>   
         <spotLight position={[-10, 30, 40]} />
         <spotLight position={[-60, 30, 40]} />
+        <fog attach="fog" args={['white', 20, 30]} />
+        <Scroll>
         <Suspense fallback={null}>
           <Shapes  />
+          <SphereTxt/>
         </Suspense>
+        </Scroll>
+        <Scroll html>
+        </Scroll>
+        </ScrollControls>
       </Canvas>
-      
       <Loader />
     </>
   )

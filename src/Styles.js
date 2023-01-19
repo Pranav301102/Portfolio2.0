@@ -6,23 +6,23 @@ import styled from "styled-components"
 const Container = styled(a.div)`
   pointer-events: none;
   position: fixed;
-  top: -20%;
-  left: -20%;
+  top: -10%;
+  left: -2em;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: left;
-`
-
-const Jumbo = styled.div`
   white-space: pre;
   margin-bottom: 3.5rem;
   font-size: 3em;
   font-weight: 500;
   letter-spacing: 0px;
 `
+
+
+
 
 const NavRight = styled(a.div)`
   position: absolute;
@@ -65,4 +65,4 @@ function Nav(props) {
   )
 }
 
-export { Container, Jumbo, Nav, Box, Line, Cover }
+export { Container, Nav, Box, Line, Cover }
