@@ -19,6 +19,7 @@
     "react-scripts": "5.0.1",
     "styled-components": "5.3.5",
     "three": "0.139.2",
+    "typewriter-effect": "^2.19.0",
     "wouter": "2.7.5"
   },
   "devDependencies": {

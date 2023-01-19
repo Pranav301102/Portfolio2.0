@@ -1,5 +1,5 @@
 import * as THREE from "three"
-import { Suspense, Children, useLayoutEffect, useMemo, useRef } from "react"
+import { Suspense, Children, useLayoutEffect, useMemo, useRef,useState,useCallback,useEffect } from "react"
 import { Canvas, useThree, useFrame } from "@react-three/fiber"
 import { ContactShadows, Loader, useTexture,useScroll,ScrollControls,Scroll} from "@react-three/drei"
 import { useSpring } from "@react-spring/core"
@@ -8,67 +8,11 @@ import { a } from "@react-spring/three"
 import DistortionMaterial from "./DistortionMaterial"
 import { Container, Nav, Box, Line, Cover } from "./Styles"
 import SphereTxt from "./SphereText/SphereText"
-
-const square = new THREE.PlaneBufferGeometry(20,43,254,254)
-
-const material1 = new DistortionMaterial()
+import { Shapes,Text } from "./Componenets/HomePage/Home"
 
 
 
-function Shape({ geometry, material, args, textures, opacity, color, shadowScale = [9, 1.5, 1], ...props }) {
-  const ref = useRef()
-  const { mouse, clock } = useThree()
-  const [ao, normal, height, roughness] = textures
-  const [rEuler, rQuaternion] = useMemo(() => [new THREE.Euler(), new THREE.Quaternion()], [])
-  useFrame(() => {
-    if (ref.current) {
-      rEuler.set((-mouse.y * Math.PI) / 50, (mouse.x * Math.PI) / 30, -Math.PI / 3)
-      ref.current.quaternion.slerp(rQuaternion.setFromEuler(rEuler), 0.1)
-      ref.current.material.time = clock.getElapsedTime() * 3
-    }
-  })
-  return (
-    <group {...props}>
-      <a.mesh
-        position={[-10,7,0]}
-        ref={ref}
-        args={args}
-        geometry={geometry}
-        material={material}
-        material-color="white"
-        material-aoMap={ao}
-        material-normalMap={normal}
-        material-displacementMap={height}
-        material-roughnessMap={roughness}
-        material-opacity={opacity}
-      />
-    </group>
-  )
-}
 
-function Shapes() {
-  
-  const textures = useTexture(["/ao.jpg", "/normal.jpg", "/height.png", "/roughness.jpg"])
-  useLayoutEffect(() => {
-    textures.forEach((texture) => ((texture.wrapT = texture.wrapS = THREE.RepeatWrapping), texture.repeat.set(4, 4)))
-  }, [textures])
-  return(
-    <group>
-      
-          <Shape geometry={square} material={material1} textures={textures} opacity={[1]} />
-        
-    </group>
-  )
-}
-
-function Text({ opacity }) {
-  return (
-    <Box style={{ opacity }}>
-      <h1>Hey</h1>
-      <h1>I am Pranav</h1>
-    </Box>
-  )
-}
 
 function Background({ color }) {
   const scroll = useScroll()
@@ -95,18 +39,16 @@ function Background({ color }) {
 }
 
 export default function App() {
-  // Current route
-  // Animated shape props
-  const [location] = "/"
-  // Animated shape props
+  
+  const [scroll, setScroll] = useState(true)
+  const props = useSpring({
+    opacity : scroll ? 1:0
+  })
   
   return (
     <>
-      <Container>
-           
-        <Text opacity={[1]}/>
-          
-        
+      <Container style={props}>  
+        <Text />
       </Container>
       <Canvas  camera={{ position: [0, 0, 20], fov: 50 }}>
       <ScrollControls damping={4} pages={4.8}>   
@@ -115,7 +57,7 @@ export default function App() {
         <fog attach="fog" args={['white', 20, 30]} />
         <Scroll>
         <Suspense fallback={null}>
-          <Shapes  />
+          <Shapes  scroll={scroll} onScrollChange={setScroll}/>
           <SphereTxt/>
         </Suspense>
         </Scroll>

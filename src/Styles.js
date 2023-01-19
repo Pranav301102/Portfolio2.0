@@ -6,8 +6,8 @@ import styled from "styled-components"
 const Container = styled(a.div)`
   pointer-events: none;
   position: fixed;
-  top: -10%;
-  left: -2em;
+  top: 10%;
+  left: -10%;
   width: 100%;
   height: 100%;
   display: flex;
