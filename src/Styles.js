@@ -65,4 +65,9 @@ function Nav(props) {
   )
 }
 
-export { Container, Nav, Box, Line, Cover }
+const Home = styled.div`
+    height: 140vh ;
+    width: 100vw;
+
+`
+export { Home,Container, Nav, Box, Line, Cover }

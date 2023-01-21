@@ -13,7 +13,7 @@ function Word({ children, ...props }) {
   const color = new THREE.Color();
   const fontProps = {
     font: "/Inter-Bold.woff",
-    fontSize: 0.6,
+    fontSize: 0.4,
     letterSpacing: -0.05,
     lineHeight: 1,
     "material-toneMapped": false,
@@ -76,7 +76,6 @@ function Cloud({ count = 3, radius = 10 }) {
 
 export default function SphereTxt() {
   const cloudref = useRef();
-  console.log(cloudref);
   useFrame((state, delta) => {
     cloudref.current.rotation.x -= delta / 10;
     cloudref.current.rotation.y -= delta / 10;
@@ -84,8 +83,8 @@ export default function SphereTxt() {
   return (
     <scene>
      
-      <group ref={cloudref} position={[15.5, -2.5,0]} >
-        <Cloud count={13} radius={10} />
+      <group ref={cloudref} position={[14.5, -1.5,0]} >
+        <Cloud count={10} radius={8} />
       </group>
     
     </scene>

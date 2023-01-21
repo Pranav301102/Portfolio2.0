@@ -1,0 +1,141 @@
+$color-white: #fafafa;
+$color-off-white: #dfdfdf;
+$color-gray: darken($color-white, 50%);
+$color-black: #000;
+$font-copy: "Montserrat", sans-serif;
+$font-title: "Anton", sans-serif;
+
+$screen-lg: 920px;
+$screen-md: 760px;
+$screen-sm: 580px;
+$screen-xsm: 370px;
+
+@mixin respond($screen-size) {
+    @media only screen and (max-width: $screen-size) {
+      @content;
+    }
+  }
+  
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  *::selection {
+    color: $color-black;
+    background-color: $color-off-white;
+  }
+  
+  .page-title {
+      display: flex;
+      margin-bottom: 8rem;
+      font-family: $font-title;
+      font-size: 8rem;
+      font-weight: 100;
+      text-transform: uppercase;
+      letter-spacing: -0.4px;
+      line-height: 8rem;
+      color: black;
+      padding-left: 1em;
+    
+      @include respond($screen-md) {
+        margin-bottom: 6rem;
+        font-size: 8rem;
+      }
+    
+      @include respond($screen-sm) {
+        margin-bottom: 5rem;
+        font-size: 6rem;
+        justify-content: center;
+        padding-left: 0;
+      }
+    
+      @include respond($screen-xsm) {
+        margin-bottom: 0;
+        font-size: 3rem;
+        justify-content: center;
+        padding-left:0;
+      }
+    }
+  
+  
+  
+  .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      
+    
+      @include respond($screen-md) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+      }
+      
+      &__img{
+          width: 200px;
+          height: 200px;
+          
+      }
+  
+      &__descriptor {
+        width: 14%;
+        border-top: 1px solid $color-gray;
+        padding-top: 4rem;
+        display: flex;
+        justify-content: center;
+        margin-left: 10rem;
+    
+        @include respond($screen-md) {
+          width: 100%;
+          padding: 2rem 0;
+          border-top: none;
+        }
+        @include respond($screen-sm) {
+          margin-left: 0;
+        }
+      }
+    
+      &__title {
+        font-size: 1.5rem;
+        font-weight: 400;
+      }
+    
+      &__text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 2rem;
+        width: 50%;
+        border-top: 1px solid $color-gray;
+        border-bottom: 1px solid $color-gray;
+        margin-right: 10rem;
+        padding: 4rem 0;
+    
+        @include respond($screen-lg) {
+          margin-right: 0;
+        }
+    
+        @include respond($screen-md) {
+          width: 100%;
+          padding: 2rem 0;
+        }
+    
+        @include respond($screen-sm) {
+          border-bottom: none;
+        }
+      }
+    
+      &__text {
+        width: 420px;
+        font-size: 1.5rem;
+        @include respond($screen-sm) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
