@@ -1,0 +1,97 @@
+$screen-lg: 920px;
+$screen-md: 760px;
+$screen-sm: 580px;
+$screen-xsm: 370px;
+
+@mixin respond($screen-size) {
+    @media only screen and (max-width: $screen-size) {
+      @content;
+    }
+}
+
+.Skills-Container{
+   margin-top:20vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+
+}
+.page-title {
+    display: flex;
+    margin-bottom: 2rem;
+    
+    font-size: 4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: -0.4px;
+    line-height: 8rem;
+    color: black;
+    padding-left: 1em;
+  
+    @include respond($screen-md) {
+      margin-bottom: 6rem;
+      font-size: 8rem;
+    }
+  
+    @include respond($screen-sm) {
+      margin-bottom: 5rem;
+      font-size: 6rem;
+      justify-content: center;
+      padding-left: 0;
+    }
+  
+    @include respond($screen-xsm) {
+      margin-bottom: 0;
+      font-size: 3rem;
+      justify-content: center;
+      padding-left:0;
+    }
+  }
+
+  .Skills {
+    display: flex;
+    width: 60vw;
+    border-radius:1em;
+    background-color: rgba(150, 150, 150, 0.123);
+    backdrop-filter: blur(4px);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    @include respond($screen-md) {
+
+    }
+  
+    @include respond($screen-sm) {
+   
+    }
+  
+    @include respond($screen-xsm) {
+        width: 100%;
+        border-radius:0;
+    }
+  }
+
+  .Skill {
+    flex: 1 0 calc(33% - 10px); /* explanation below */
+    margin: 5px;
+    height: 20vh;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    @include respond($screen-md) {
+
+    }
+  
+    @include respond($screen-sm) {
+   
+    }
+  
+    @include respond($screen-xsm) {
+    
+    }
+  }
+
+  .img{
+    width: 4vw;
+  }
+

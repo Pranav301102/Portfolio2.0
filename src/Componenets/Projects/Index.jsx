@@ -175,7 +175,7 @@ export default function Project() {
   const [numoff, setoff] = useState(0);
 
   return (
-      <group position={[-2, -30, 0]}>
+      <group position={[-2, -40, 0]}>
         <Marker numTwo={numoff} setTwo={setoff} />
         <Map num={numoff} setone={setoff} />
         <Images num={numoff} />

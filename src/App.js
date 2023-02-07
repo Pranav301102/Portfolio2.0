@@ -12,6 +12,8 @@ import { Shapes,Text } from "./Componenets/HomePage/Index"
 import AboutME from "./Componenets/About/Index"
 import Fooback from "./Componenets/Footer/Index"
 import Project from './Componenets/Projects/Index';
+import Skills from "./Componenets/Skills/Index"
+import Stars from "./Componenets/Stars/Index"
 
 
 function Background({ color }) {
@@ -20,16 +22,16 @@ function Background({ color }) {
   useFrame(( gl ) => {
     
     if(scroll.offset<0.10){
-      gl.scene.background.lerp(tcolor.set( "rgb(255, 255, 255,0)"), 0.1)
+      gl.scene.background.lerp(tcolor.set( "rgb(255, 255, 255,0)"), 0.05)
     }
-    else if(scroll.offset>0.05 && scroll.offset<0.40){
+    else if(scroll.offset>0.10 && scroll.offset<0.42){
       gl.scene.background.lerp(tcolor.set( "rgba(255,255,255,1)"), 0.05)
     }
     else if(scroll.offset>0.40 && scroll.offset<0.85){
       gl.scene.background.lerp(tcolor.set( "rgba(0,34,77,1)"), 0.05)
     }
     else{
-      gl.scene.background.lerp(tcolor.set( "rgb(0, 0, 0,2)"), 0.1)
+      gl.scene.background.lerp(tcolor.set( "rgb(0, 0, 0,2)"), 0.05)
     }
     
   });
@@ -65,11 +67,13 @@ export default function App() {
           <SphereTxt/>
           <Fooback/>
           <Project/>
+          <Stars position={[-35,-35,-7]}/>
         </Suspense>
         </Scroll>
         <Scroll html>
         <Home/>
         <AboutME/>
+        <Skills/>
         </Scroll>
         </ScrollControls>
       </Canvas>
