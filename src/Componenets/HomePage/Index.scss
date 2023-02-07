@@ -1,0 +1,39 @@
+$screen-lg: 920px;
+$screen-md: 760px;
+$screen-sm: 580px;
+$screen-xsm: 370px;
+
+@mixin respond($screen-size) {
+    @media only screen and (max-width: $screen-size) {
+      @content;
+    }
+  }
+
+  .box {
+    position: absolute;
+    font-size:1em ;
+    top:20%;
+    left:20%;
+    will-change: opacity;
+  
+    @include respond($screen-md) {
+        position: absolute;
+        font-size:1em ;
+        top:20%;
+        left:20%;
+    }
+  
+    @include respond($screen-sm) {
+        position: absolute;
+        font-size:1em ;
+        top:20%;
+        left:20%;
+    }
+  
+    @include respond($screen-xsm) {
+        position: absolute;
+        font-size:0.5em ;
+        top:10%;
+        left:20%;
+    }
+  }

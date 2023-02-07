@@ -9,9 +9,8 @@ import { useAspect, useVideoTexture, useTexture } from '@react-three/drei'
 export default function Fooback() {
   const ref = useRef()
   const size = useAspect(1800, 1000)
-  console.log(size)
   return (
-    <mesh ref={ref} scale={[size[0]*0.8,size[1]*0.8,size[2]]} position={[0,-30.2,4]} rotation={[0, 0, -Math.PI / 13]}>
+    <mesh ref={ref} scale={[size[0]*0.8,size[1]*0.8,size[2]]} position={[0,-50,4]} rotation={[0, 0, -Math.PI / 13]}>
       <planeGeometry/>  
       <Suspense fallback={<FallbackMaterial url="10.jpg" />}>
         <VideoMaterial url="10.mp4" />

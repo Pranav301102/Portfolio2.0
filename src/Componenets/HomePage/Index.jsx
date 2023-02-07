@@ -4,12 +4,12 @@ import {  useThree, useFrame } from "@react-three/fiber"
 import {  useTexture,useScroll,ScrollControls,Scroll,Merged} from "@react-three/drei"
 import Typewriter from "typewriter-effect"
 import { a } from "@react-spring/three"
-
+import './Index.scss'
 import DistortionMaterial from "../../DistortionMaterial"
 import {  Box, } from "../../Styles"
 
 
-const square = new THREE.PlaneBufferGeometry(10,20,256,256)
+const square = new THREE.PlaneBufferGeometry(9,22,256,256)
 
 const material1 = new DistortionMaterial()
 
@@ -64,8 +64,8 @@ export function Shapes({scroll, onScrollChange}){
   }, [textures])
   return(
     <group >
-          <Shape geometry={square} material={material1} textures={textures} opacity={[1]} pos={[-3.3,4,0]} rotate = {[-Math.PI / 3]}/>
-          <Shape geometry={square} material={material1} textures={textures} opacity={[1]} pos={[0,-13.5,0]} rotate = {[-Math.PI / 1.9]}/>
+          <Shape geometry={square} material={material1} textures={textures} opacity={[1]} pos={[-3.3,4,2]} rotate = {[-Math.PI / 3]}/>
+          <Shape geometry={square} material={material1} textures={textures} opacity={[1]} pos={[0,-12.5,2]} rotate = {[-Math.PI / 1.9]}/>
     </group>
   )
 }
@@ -75,7 +75,7 @@ export function Text() {
   // Animated shape props
   
   return (
-    <Box >
+    <div className="box" >
       <h1>Hey</h1>
       <h1>I am Pranav</h1>
       <Typewriter
@@ -86,7 +86,7 @@ export function Text() {
                 delay: 50
               }}
             />
-    </Box>
+    </div>
   )
 }
 

@@ -10,7 +10,8 @@ import { Container, Home } from "./Styles"
 import SphereTxt from "./Componenets/SphereText/Index"
 import { Shapes,Text } from "./Componenets/HomePage/Index"
 import AboutME from "./Componenets/About/Index"
-import Fooback from "./Footer/Index"
+import Fooback from "./Componenets/Footer/Index"
+import Project from './Componenets/Projects/Index';
 
 
 function Background({ color }) {
@@ -51,7 +52,7 @@ export default function App() {
         <Text />
       </Container>
       <Canvas  camera={{ position: [0, 0, 10], fov: 50 }}>
-      <ScrollControls damping={1} pages={7}>   
+      <ScrollControls damping={0.5} pages={7}>   
         <spotLight position={[-10, 30, 40]} />
         <spotLight position={[-60, 30, 40]} />
         <fog attach="fog" args={['white', 10, 20]} />
@@ -63,6 +64,7 @@ export default function App() {
           <Shapes  scroll={scroll} onScrollChange={setScroll}/>
           <SphereTxt/>
           <Fooback/>
+          <Project/>
         </Suspense>
         </Scroll>
         <Scroll html>

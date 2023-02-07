@@ -1,0 +1,26 @@
+$screen-lg: 920px;
+$screen-md: 760px;
+$screen-sm: 580px;
+$screen-xsm: 370px;
+
+@mixin respond($screen-size) {
+    @media only screen and (max-width: $screen-size) {
+      @content;
+    }
+  }
+
+  .info {
+    max-width: 300px;
+    color: aliceblue;
+    @include respond($screen-md) {
+       
+    }
+  
+    @include respond($screen-sm) {
+        
+    }
+  
+    @include respond($screen-xsm) {
+       
+    }
+  }

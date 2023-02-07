@@ -3,6 +3,8 @@ import "styled-components/macro"
 import { a } from "@react-spring/web"
 import styled from "styled-components"
 
+
+
 const Container = styled(a.div)`
   pointer-events: none;
   position: fixed;
@@ -30,11 +32,7 @@ const NavRight = styled(a.div)`
   top: 50px;
 `
 
-const Box = styled(a.div)`
-  position: absolute;
-  transform: translate3d(-50%, -42%, 0);
-  will-change: opacity;
-`
+
 
 const Line = styled(a.div)`
   position: relative;
@@ -70,4 +68,4 @@ const Home = styled.div`
     width: 100vw;
 
 `
-export { Home,Container, Nav, Box, Line, Cover }
+export { Home,Container, Nav,  Line, Cover }

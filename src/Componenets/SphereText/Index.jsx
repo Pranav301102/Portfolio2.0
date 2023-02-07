@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { useRef, useState, useMemo, useEffect } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame ,useThree} from "@react-three/fiber";
 import {
   Text,
   TrackballControls,
@@ -76,14 +76,20 @@ function Cloud({ count = 3, radius = 10 }) {
 
 export default function SphereTxt() {
   const cloudref = useRef();
+  const { width: w, height: h } = useThree((state) => state.viewport)
+  let m =1
+  if (w<7.0){
+    m = -1
+  }
   useFrame((state, delta) => {
+    
     cloudref.current.rotation.x -= delta / 10;
     cloudref.current.rotation.y -= delta / 10;
   });
   return (
     <scene>
      
-      <group ref={cloudref} position={[14.5, -1.5,0]} >
+      <group ref={cloudref} position={[w-4*m , -1.5,0]} >
         <Cloud count={10} radius={8} />
       </group>
     
