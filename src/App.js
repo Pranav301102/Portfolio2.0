@@ -12,7 +12,7 @@ import { Shapes,Text } from "./Componenets/HomePage/Index"
 import AboutME from "./Componenets/About/Index"
 import Fooback from "./Componenets/Footer/Index"
 import Project from './Componenets/Projects/Index';
-import Skills from "./Componenets/Skills/Index"
+import Skills, { Rects } from "./Componenets/Skills/Index"
 import Stars from "./Componenets/Stars/Index"
 
 
@@ -31,7 +31,7 @@ function Background({ color }) {
       gl.scene.background.lerp(tcolor.set( "rgba(0,34,77,1)"), 0.05)
     }
     else{
-      gl.scene.background.lerp(tcolor.set( "rgb(0, 0, 0,2)"), 0.05)
+      gl.scene.background.lerp(tcolor.set( "rgba(0,34,77,1)"), 0.05)
     }
     
   });
@@ -54,7 +54,7 @@ export default function App() {
         <Text />
       </Container>
       <Canvas  camera={{ position: [0, 0, 10], fov: 50 }}>
-      <ScrollControls damping={0.5} pages={7}>   
+      <ScrollControls damping={0.5} pages={6}>   
         <spotLight position={[-10, 30, 40]} />
         <spotLight position={[-60, 30, 40]} />
         <fog attach="fog" args={['white', 10, 20]} />
@@ -65,9 +65,10 @@ export default function App() {
         <Suspense fallback={null}>
           <Shapes  scroll={scroll} onScrollChange={setScroll}/>
           <SphereTxt/>
+          <Rects/>
           <Fooback/>
           <Project/>
-          <Stars position={[-35,-35,-7]}/>
+          <Stars position={[-38,-38,0]}/>
         </Suspense>
         </Scroll>
         <Scroll html>

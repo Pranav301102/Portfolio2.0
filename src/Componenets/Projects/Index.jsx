@@ -59,7 +59,7 @@ function TextImage({ index, num }) {
   );
 }
 
-function Rect({ position, scale, ...props }) {
+ export function Rect({ position, scale, ...props }) {
   return (
     <group scale={scale}>
       <Line
@@ -82,7 +82,7 @@ function Rect({ position, scale, ...props }) {
         ]}
         color="white"
         linewidth={1}
-        position={[0, 0, 0]}
+        position={position}
       />
       <mesh {...props} raycast={meshBounds}>
         <planeGeometry />
@@ -128,7 +128,7 @@ function Marker({ numTwo, setTwo }) {
   });
 
   return (
-    <group ref={ref} position={[0, -5, 0]}>
+    <group ref={ref} position={[0, -3.5, 0]}>
       <Rect
         onPointerOver={(e) => (e.stopPropagation(), set(true))}
         onPointerOut={() => set(false)}
@@ -165,7 +165,7 @@ function Images({ num }) {
 
 function Map({ num, setone }) {
   return new Array(6).fill().map((img, index) => (
-    <mesh key={index} position={[index, -5, 0]}>
+    <mesh key={index} position={[index, -3.5, 0]}>
       <Dot index={index} {...{ num, setone }} />
     </mesh>
   ));

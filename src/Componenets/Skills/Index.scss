@@ -10,7 +10,7 @@ $screen-xsm: 370px;
 }
 
 .Skills-Container{
-   margin-top:20vh;
+   margin-top:50vh;
    width: 100%;
    display: flex;
    flex-direction: column;
@@ -26,7 +26,7 @@ $screen-xsm: 370px;
     letter-spacing: -0.4px;
     line-height: 8rem;
     color: black;
-    padding-left: 1em;
+    padding-left: 4em;
   
     @include respond($screen-md) {
       margin-bottom: 6rem;
@@ -92,6 +92,10 @@ $screen-xsm: 370px;
   }
 
   .img{
-    width: 4vw;
+    width: 2vw;
   }
 
+.skill-bar{
+  margin: auto;
+  width : 6vw;
+}
