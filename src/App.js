@@ -15,6 +15,7 @@ import Project,{ProjectTitle} from './Componenets/Projects/Index';
 import Skills, { Rects } from "./Componenets/Skills/Index"
 import Stars from "./Componenets/Stars/Index"
 import {Footer} from "./Componenets/Footer/Index"
+import Tech from "./Componenets/Tech/Index"
 
 function Background({ color }) {
   const scroll = useScroll()
@@ -76,6 +77,7 @@ export default function App() {
         <Home/>
         <AboutME/>
         <Skills/>
+        <Tech/>
         <ProjectTitle/>
         <Footer/>
         </MainContainer>

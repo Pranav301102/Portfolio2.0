@@ -25,6 +25,26 @@ export default function AboutME(){
         </section>
         </article>
         </div>
+        <div className="Achievements">
+        <h1 className="Achievements__title">My Achievement</h1>
+        <div className="Achievements__container">
+          <div className="Achievements__achivement">
+          <h3>IEEE Techithon</h3>
+          Asst. Technical Head(2022)
+          </div>
+          <div className="Achievements__achivement">
+          <h3>Ember E-Cell</h3>
+           Technical Head(2023)
+          </div>
+          </div>
+          <h1 className="Achievements__title">Education</h1>
+          <div className="Achievements__container">  
+          <div className="Achievements__achivement">
+          <h3>B.Tech Information Technology</h3>
+              Atharva College of Engineering(2024), Mumbai
+          </div> 
+          </div>
+        </div>
       </div>
     )
   }

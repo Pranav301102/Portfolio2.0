@@ -11,136 +11,176 @@ $screen-sm: 580px;
 $screen-xsm: 370px;
 
 @mixin respond($screen-size) {
-    @media only screen and (max-width: $screen-size) {
-      @content;
-    }
+  @media only screen and (max-width: $screen-size) {
+    @content;
   }
-  
-  *,
-  *::after,
-  *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  *::selection {
-    color: $color-black;
-    background-color: $color-off-white;
-  }
-  
-  .page-title {
-      display: flex;
-      margin-bottom: 8rem;
-      font-family: $font-title;
-      font-size: 8rem;
-      font-weight: 100;
-      text-transform: uppercase;
-      letter-spacing: -0.4px;
-      line-height: 8rem;
-      color: black;
-      padding-left: 1em;
-    
-      @include respond($screen-md) {
-        margin-bottom: 6rem;
-        font-size: 8rem;
-      }
-    
-      @include respond($screen-sm) {
-        margin-bottom: 5rem;
-        font-size: 6rem;
-        justify-content: center;
-        padding-left: 0;
-      }
-    
-      @include respond($screen-xsm) {
-        margin-bottom: 0;
-        font-size: 3rem;
-        justify-content: center;
-        padding-left:0;
-      }
-    }
-  
-  
-  
-  .content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      
-    
-      @include respond($screen-md) {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-      }
-      
-      &__img{
-          width: 200px;
-          height: 200px;
-          
-      }
-  
-      &__descriptor {
-        width: 14%;
-        border-top: 1px solid $color-gray;
-        padding-top: 4rem;
-        display: flex;
-        justify-content: center;
-        margin-left: 10rem;
-    
-        @include respond($screen-md) {
-          width: 100%;
-          padding: 2rem 0;
-          border-top: none;
-        }
-        @include respond($screen-sm) {
-          margin-left: 0;
-        }
-      }
-    
-      &__title {
-        font-size: 1.5rem;
-        font-weight: 400;
-      }
-    
-      &__text-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
-        gap: 2rem;
-        width: 50%;
-        border-top: 1px solid $color-gray;
-        border-bottom: 1px solid $color-gray;
-        margin-right: 10rem;
-        padding: 4rem 0;
-    
-        @include respond($screen-lg) {
-          margin-right: 0;
-        }
-    
-        @include respond($screen-md) {
-          width: 100%;
-          padding: 2rem 0;
-        }
-    
-        @include respond($screen-sm) {
-          border-bottom: none;
-        }
-      }
-    
-      &__text {
-        width: 420px;
-        font-size: 1.5rem;
-        @include respond($screen-sm) {
-          width: 100%;
-          text-align: center;
-        }
+}
 
-      }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::selection {
+  color: $color-black;
+  background-color: $color-off-white;
+}
+
+.page-title {
+  display: flex;
+  margin-bottom: 8rem;
+  font-family: $font-title;
+  font-size: 8rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: -0.4px;
+  line-height: 8rem;
+  color: black;
+  padding-left: 1em;
+
+  @include respond($screen-md) {
+    margin-bottom: 6rem;
+    font-size: 8rem;
+  }
+
+  @include respond($screen-sm) {
+    margin-bottom: 5rem;
+    font-size: 6rem;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  @include respond($screen-xsm) {
+    margin-bottom: 0;
+    font-size: 3rem;
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  @include respond($screen-md) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  &__img {
+    width: 200px;
+    height: 200px;
+  }
+
+  &__descriptor {
+    width: 14%;
+    border-top: 1px solid $color-gray;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    margin-left: 10rem;
+
+    @include respond($screen-md) {
+      width: 100%;
+      padding: 2rem 0;
+      border-top: none;
     }
+    @include respond($screen-sm) {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 2rem;
+    width: 50%;
+    border-top: 1px solid $color-gray;
+    border-bottom: 1px solid $color-gray;
+    margin-right: 10rem;
+    padding: 4rem 0;
+
+    @include respond($screen-lg) {
+      margin-right: 0;
+    }
+
+    @include respond($screen-md) {
+      width: 100%;
+      padding: 2rem 0;
+    }
+
+    @include respond($screen-sm) {
+      border-bottom: none;
+    }
+  }
+
+  &__text {
+    width: 420px;
+    font-size: 1.5rem;
+    @include respond($screen-sm) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
 
 .About-container {
-    display: block;
+  display: block;
+}
+
+.Achievements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    text-align: center;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: -0.4px;
+    line-height: 2rem;
+    color: rgb(0, 0, 0);
+    margin: 30px 0;
+  }
+  &__container {
+    width: 100vw;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__achivement {
+    color: rgb(255, 255, 255);
+    flex: 0 0 42%; /* explanation below */
+    margin: 10px;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__achivement h3 {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
 }
