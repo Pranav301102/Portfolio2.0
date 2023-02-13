@@ -24,3 +24,100 @@ $screen-xsm: 370px;
        
     }
   }
+
+.Project-Title{
+  margin-top: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  @include respond($screen-lg) {
+     
+  }
+  @include respond($screen-md) {
+     
+  }
+
+  @include respond($screen-sm) {
+      
+  }
+
+  @include respond($screen-xsm) {
+     
+  }
+
+}
+
+#title{
+  display: flex;
+  justify-content: center;
+  font-size: 6rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: -0.4px;
+  line-height: 8rem;
+  // width: 100%;
+  background: linear-gradient(30deg, #c850c0, #ffcc70);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin: 20px;
+  @include respond($screen-lg) {
+     
+  }
+  @include respond($screen-md) {
+     
+  }
+
+  @include respond($screen-sm) {
+      
+  }
+
+  @include respond($screen-xsm) {
+     
+  }
+}
+
+#upper-line{
+  margin-left: -15vw;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(30deg, #c850c0, #ffcc70);
+  width: 30%;
+  @include respond($screen-lg) {
+     
+  }
+  @include respond($screen-md) {
+     
+  }
+
+  @include respond($screen-sm) {
+      
+  }
+
+  @include respond($screen-xsm) {
+     
+  }
+}
+
+#buttom-line{
+  width: 100%;
+  height: 1px;
+  width: 40%;
+  background: linear-gradient(-30deg, #c850c0, #ffcc70);
+  margin-left: 25vw;
+  @include respond($screen-lg) {
+     
+  }
+  @include respond($screen-md) {
+     
+  }
+
+  @include respond($screen-sm) {
+      
+  }
+
+  @include respond($screen-xsm) {
+     
+  }
+}

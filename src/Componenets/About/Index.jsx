@@ -3,7 +3,6 @@ import './Index.scss'
 export default function AboutME(){
     return(
       <div className="About-Container">
-        
         <div className="About-Me">
         <h1 className="page-title">About Me</h1>
         <article className="content">
@@ -29,3 +28,4 @@ export default function AboutME(){
       </div>
     )
   }
+

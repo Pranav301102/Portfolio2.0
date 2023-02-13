@@ -11,7 +11,7 @@ import {
   useTexture,
   Html
 } from "@react-three/drei";
-
+import './Index.scss';
 
 function TextImage({ index, num }) {
   const ref = useRef();
@@ -182,3 +182,16 @@ export default function Project() {
       </group>
   );
 }
+
+export function ProjectTitle(){
+  return(
+    <>
+      <div className="Project-Title">
+        <div id="upper-line"></div>
+        <h1 id="title">Projects</h1>
+        <div id="buttom-line"></div>
+      </div>
+    </>
+  )
+}
+

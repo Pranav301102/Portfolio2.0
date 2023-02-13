@@ -10,38 +10,36 @@ $screen-xsm: 370px;
 }
 
 .Skills-Container{
+  display: flex;
+   align-items: center;
    margin-top:50vh;
    width: 100%;
    display: flex;
    flex-direction: column;
-
+   flex-wrap: wrap;
 }
-.page-title {
+.page-title-skill {
     display: flex;
-    margin-bottom: 2rem;
-    
-    font-size: 4rem;
+    justify-content: center;
+    font-size: 6rem;
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: -0.4px;
-    line-height: 8rem;
     color: black;
-    padding-left: 4em;
-  
     @include respond($screen-md) {
-      margin-bottom: 6rem;
+      
       font-size: 8rem;
     }
   
     @include respond($screen-sm) {
-      margin-bottom: 5rem;
+      
       font-size: 6rem;
       justify-content: center;
       padding-left: 0;
     }
   
     @include respond($screen-xsm) {
-      margin-bottom: 0;
+      
       font-size: 3rem;
       justify-content: center;
       padding-left:0;
@@ -56,7 +54,7 @@ $screen-xsm: 370px;
     backdrop-filter: blur(4px);
     flex-wrap: wrap;
     justify-content: center;
-    margin: auto;
+    
     @include respond($screen-md) {
 
     }
@@ -98,4 +96,50 @@ $screen-xsm: 370px;
 .skill-bar{
   margin: auto;
   width : 6vw;
+}
+
+
+#upper-line-skill{
+  margin-left: -15vw;
+  width: 100%;
+  height: 1px;
+  background: black;
+  width: 30%;
+  @include respond($screen-lg) {
+     
+  }
+  @include respond($screen-md) {
+     
+  }
+
+  @include respond($screen-sm) {
+      
+  }
+
+  @include respond($screen-xsm) {
+     
+  }
+}
+
+#buttom-line-skill{
+  width: 100%;
+  height: 1px;
+  width: 40%;
+  background: black;
+  margin-bottom: 2rem;
+  margin-left: 25vw;
+  @include respond($screen-lg) {
+     
+  }
+  @include respond($screen-md) {
+     
+  }
+
+  @include respond($screen-sm) {
+      
+  }
+
+  @include respond($screen-xsm) {
+     
+  }
 }

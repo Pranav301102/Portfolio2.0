@@ -9,7 +9,9 @@ import { useFrame } from '@react-three/fiber';
 export default function Skills() {
   return (
     <div className="Skills-Container">
-      <h1 className="page-title">Skills</h1>
+      <div id="upper-line-skill"></div>
+      <h1 className="page-title-skill">Skills</h1>
+      <div id="buttom-line-skill"></div>
       <div className="Skills">
         <Skill value={88} src={'https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg'} />
         <Skill value={88} src={'https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg'} />
@@ -110,3 +112,6 @@ function Skill(props) {
     </div>
   )
 }
+
+
+
