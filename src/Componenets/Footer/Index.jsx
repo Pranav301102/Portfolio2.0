@@ -11,7 +11,7 @@ export default function Fooback() {
   const ref = useRef()
   const size = useAspect(1800, 1000)
   return (
-    <mesh ref={ref} scale={[size[0]*0.17,size[1]*0.17,size[2]]} position={[-0,-47.5,9]} rotation={[0, 0, -Math.PI / 13]}>
+    <mesh ref={ref} scale={[size[0]*0.17,size[1]*0.17,size[2]]} position={[-0,-47.7,9]} rotation={[0, 0, -Math.PI / 13]}>
       <planeGeometry/>  
       <Suspense fallback={<FallbackMaterial url="10.jpg" />}>
         <VideoMaterial url="10.mp4" />
@@ -38,9 +38,9 @@ function VideoMaterial({ url }) {
       return (
         <>
           <div className='footer'>
-          <div class="main">
-            <div class="col1">
-              <p class="heading">Contact Me</p>
+          <div className="main">
+            <div className="col1">
+              <p className ="heading">Contact Me</p>
               <ul>
                 <li>
                   Pranav Trivedi  
@@ -52,16 +52,16 @@ function VideoMaterial({ url }) {
                 </li>
               </ul>
             </div>
-            <div class="col2">
-              <p class="heading"></p>
+            <div className ="col2">
+              <p className="heading"></p>
               <ul>
                 <li>
                   
                 </li>
               </ul>
             </div>
-            <div class="col3">
-              <p class="heading">My Email</p>
+            <div className="col3">
+              <p className="heading">My Email</p>
               <ul>
                 <li>
                   Pranavtrivedi02@gmail.com
@@ -69,8 +69,8 @@ function VideoMaterial({ url }) {
               </ul>
             </div>
           </div>
-          <div class="bottom">
-            <p class="copyright">© Pranav Trivei. All rights reserved.</p>
+          <div className="bottom">
+            <p className="copyright">© Pranav Trivei. All rights reserved.</p>
           </div>
           </div>
         </>

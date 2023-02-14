@@ -4,7 +4,7 @@ import { Line,meshBounds } from "@react-three/drei"
 import "react-circular-progressbar/dist/styles.css"
 import "./Index.scss"
 import { useRef } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame ,useThree} from '@react-three/fiber';
 
 export default function Skills() {
   return (
@@ -65,17 +65,17 @@ export function Rects ({ position, scale, ...props }) {
   const ref1 = useRef()
   const ref2 = useRef()
   const ref3 = useRef()
+  const { size } = useThree()
   useFrame(()=>{
     ref1.current.rotation.z = ref1.current.rotation.z + 0.001
     ref2.current.rotation.z = ref2.current.rotation.z + 0.003
-    ref3.current.rotation.z = ref3.current.rotation.z + 0.007
+    // ref3.current.rotation.z = ref3.current.rotation.z + 0.007
   })
-  console.log(ref1)
   return (
     <group scale={scale}>
         <BlackRect innerRef={ref1} position={[13,-20,0]} scale={8}/>
         <BlackRect innerRef={ref2}position={[-11,-22,0]} scale={5}/>
-        v<BlackRect innerRef={ref3}position={[-2,-27,0]} scale={2}/>
+        {/* <BlackRect innerRef={ref3}position={[-2,-27,0]} scale={2}/> */}
     </group>
   );
 }

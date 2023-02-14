@@ -66,6 +66,15 @@ function Nav(props) {
 const Home = styled.div`
     height: 140vh ;
     width: 100vw;
+    @media only screen and  (max-width: 768px) {
+      height: 120vh;
+    }
+    @media only screen and  (max-width: 580px) {
+      height: 100vh;
+    }
+    @media only screen and  (max-width: 370px) {
+      height: 100vh;
+    }
 
 `
 export { Home,Container, Nav,  Line, Cover }

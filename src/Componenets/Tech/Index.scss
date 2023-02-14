@@ -1,7 +1,7 @@
 $screen-lg: 920px;
 $screen-md: 760px;
 $screen-sm: 580px;
-$screen-xsm: 370px;
+$screen-xsm: 380px;
 
 @mixin respond($screen-size) {
   @media only screen and (max-width: $screen-size) {
@@ -15,15 +15,46 @@ $screen-xsm: 370px;
     width: 100vw;
     align-items: center;
     &__title{
-        color: aliceblue;
+      background: linear-gradient(30deg, #c850c0, #ffcc70);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
         display: flex;
         margin: 2rem;
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: 100;
         text-transform: uppercase;
         letter-spacing: -0.4px;
-        line-height: 8rem;
         padding-left: 1em;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        @include respond($screen-lg) {
+            margin-bottom: 2rem;
+            justify-content: center;
+            font-size: 2rem;
+            padding-left: 0em;
+        }    
+        @include respond($screen-md) {
+            margin-bottom: 3rem;
+            justify-content: center;
+            font-size: 3rem;
+            padding-left: 0em;
+        }
+        @include respond($screen-sm) {
+          margin-top: 2em;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            justify-content: center;
+            padding-left: 0;
+        }
+        @include respond($screen-xsm) {
+          margin-top: 2em;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            justify-content: center;
+            padding-left: 0;
+        }
     }
   }
   

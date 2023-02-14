@@ -1,7 +1,7 @@
 $screen-lg: 920px;
 $screen-md: 760px;
 $screen-sm: 580px;
-$screen-xsm: 370px;
+$screen-xsm: 380px;
 
 @mixin respond($screen-size) {
     @media only screen and (max-width: $screen-size) {
@@ -26,30 +26,31 @@ $screen-xsm: 370px;
   }
 
 .Project-Title{
-  margin-top: 30vh;
+  margin-top: 15em;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   height: 100vh;
   @include respond($screen-lg) {
-     
+    margin-top:1em;
   }
   @include respond($screen-md) {
-     
+    margin-top: 10em;
   }
 
   @include respond($screen-sm) {
-      
+    margin-top: 20em;
   }
 
   @include respond($screen-xsm) {
-     
+    margin-top: 5em;
   }
 
 }
 
 #title{
+  width: 100%;
   display: flex;
   justify-content: center;
   font-size: 6rem;
@@ -63,18 +64,22 @@ $screen-xsm: 370px;
   -webkit-background-clip: text;
   margin: 20px;
   @include respond($screen-lg) {
-     
+    font-size: 6rem;
+    line-height: 8rem;
   }
   @include respond($screen-md) {
-     
+    font-size: 5rem;
+    line-height: 7rem;
   }
 
   @include respond($screen-sm) {
-      
+    font-size: 4rem;
+    line-height: 5rem;
   }
 
   @include respond($screen-xsm) {
-     
+    font-size: 3rem;
+    line-height: 4rem;
   }
 }
 
@@ -100,9 +105,9 @@ $screen-xsm: 370px;
   }
 }
 
-#buttom-line{
+#bottom-line{
   width: 100%;
-  height: 1px;
+  height: 2px;
   width: 40%;
   background: linear-gradient(-30deg, #c850c0, #ffcc70);
   margin-left: 25vw;

@@ -8,7 +8,7 @@ $font-title: "Anton", sans-serif;
 $screen-lg: 920px;
 $screen-md: 760px;
 $screen-sm: 580px;
-$screen-xsm: 370px;
+$screen-xsm: 380px;
 
 @mixin respond($screen-size) {
   @media only screen and (max-width: $screen-size) {
@@ -40,15 +40,22 @@ $screen-xsm: 370px;
   line-height: 8rem;
   color: black;
   padding-left: 1em;
-
+   
+  @include respond($screen-lg) {
+    margin-bottom: 0rem;
+    font-size: 5rem;
+    padding-left: 0em;
+  }
   @include respond($screen-md) {
-    margin-bottom: 6rem;
-    font-size: 8rem;
+    margin-bottom: 4rem;
+    justify-content: center;
+    font-size: 7rem;
+    padding-left: 0em;
   }
 
   @include respond($screen-sm) {
     margin-bottom: 5rem;
-    font-size: 6rem;
+    font-size: 4rem;
     justify-content: center;
     padding-left: 0;
   }
@@ -85,6 +92,7 @@ $screen-xsm: 370px;
     justify-content: center;
     margin-left: 10rem;
 
+
     @include respond($screen-md) {
       width: 100%;
       padding: 2rem 0;
@@ -114,6 +122,7 @@ $screen-xsm: 370px;
 
     @include respond($screen-lg) {
       margin-right: 0;
+    
     }
 
     @include respond($screen-md) {
@@ -129,9 +138,15 @@ $screen-xsm: 370px;
   &__text {
     width: 420px;
     font-size: 1.5rem;
+    
+    @include respond($screen-lg) {
+      margin-right: 0;
+      font-size: 1rem;
+    }
     @include respond($screen-sm) {
       width: 100%;
       text-align: center;
+      font-size: 1.2rem;
     }
   }
 }
@@ -156,6 +171,21 @@ $screen-xsm: 370px;
     line-height: 2rem;
     color: rgb(0, 0, 0);
     margin: 30px 0;
+    @include respond($screen-lg) {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+    @include respond($screen-md) {
+      font-size: 2rem;
+    }
+  
+    @include respond($screen-sm) {
+      font-size: 1.5rem;
+    }
+  
+    @include respond($screen-xsm) {
+      font-size: 1.5rem;
+    }
   }
   &__container {
     width: 100vw;
@@ -176,11 +206,42 @@ $screen-xsm: 370px;
     align-items: center;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    
+    @include respond($screen-lg) {
+      font-size: 0.8rem;
+      height: 80px;
+    } 
+    @include respond($screen-md) {
+      font-size: 1rem;
+    }
+    @include respond($screen-sm) {
+      font-size: 0.8rem;
+      height: 120px;
+      
+    }
+    @include respond($screen-xsm) {
+      font-size: 0.8rem;
+      height: 120px;
+    }
   }
 
   &__achivement h3 {
     width: 100%;
     text-align: center;
     margin: 10px;
+    font-size: 1.5rem;
+    @include respond($screen-lg) {
+      font-size: 1rem;
+    }
+    @include respond($screen-md) {
+      font-size: 1.5rem;
+    }
+    @include respond($screen-sm) {
+      font-size: 1rem;
+    }
+    @include respond($screen-xsm) {
+      font-size: 1rem;
+    }
   }
 }

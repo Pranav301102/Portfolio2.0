@@ -28,21 +28,21 @@ function TextImage({ index, num }) {
     <group ref={ref}>
       <Text
         anchorX="left"
-        position={[-1, w - 0.55, 0]}
+        position={[-0.5, w - 0.55, 0]}
         scale={2}
         color="white"
       >
         0{index}
       </Text>
       <Text
-        position={[2.5, w , 0]}
+        position={[2.9, w , 0]}
         scale={0.8}
         color="white"
       >
         Name
       </Text>
       <Text
-        position={[1.85, w- 0.6 , 0]}
+        position={[2.3, w- 0.6 , 0]}
         scale={0.3}
         color="white"
       >
@@ -175,7 +175,7 @@ export default function Project() {
   const [numoff, setoff] = useState(0);
 
   return (
-      <group position={[-2, -40, 0]}>
+      <group position={[-2.4, -42, 0]}>
         <Marker numTwo={numoff} setTwo={setoff} />
         <Map num={numoff} setone={setoff} />
         <Images num={numoff} />
@@ -189,7 +189,7 @@ export function ProjectTitle(){
       <div className="Project-Title">
         <div id="upper-line"></div>
         <h1 id="title">Projects</h1>
-        <div id="buttom-line"></div>
+        <div id="bottom-line"></div>
       </div>
     </>
   )
