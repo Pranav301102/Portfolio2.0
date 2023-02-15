@@ -4,7 +4,7 @@ export default function AboutME(){
     return(
       <div className="About-Container">
         <div className="About-Me">
-        <h1 className="page-title">About Me</h1>
+        <h2 className="page-title">About Me</h2>
         <article className="content">
         <section className="content__descriptor">
           {/* <h2 class="content__title">Info</h2> */}

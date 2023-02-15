@@ -66,6 +66,8 @@ export function Rects ({ position, scale, ...props }) {
   const ref2 = useRef()
   const ref3 = useRef()
   const { size } = useThree()
+  const w = (size.width - size.width*0.4) / 100
+  
   useFrame(()=>{
     ref1.current.rotation.z = ref1.current.rotation.z + 0.001
     ref2.current.rotation.z = ref2.current.rotation.z + 0.003
@@ -73,8 +75,8 @@ export function Rects ({ position, scale, ...props }) {
   })
   return (
     <group scale={scale}>
-        <BlackRect innerRef={ref1} position={[13,-20,0]} scale={8}/>
-        <BlackRect innerRef={ref2}position={[-11,-22,0]} scale={5}/>
+        <BlackRect innerRef={ref1} position={[w,-20,0]} scale={w*0.9}/>
+        <BlackRect innerRef={ref2}position={[-w,-22,0]} scale={w*0.7}/>
         {/* <BlackRect innerRef={ref3}position={[-2,-27,0]} scale={2}/> */}
     </group>
   );

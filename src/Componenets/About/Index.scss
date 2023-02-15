@@ -5,10 +5,13 @@ $color-black: #000;
 $font-copy: "Montserrat", sans-serif;
 $font-title: "Anton", sans-serif;
 
+$screen-xxl: 1600px;
+$screen-xl: 1300px;
 $screen-lg: 920px;
 $screen-md: 760px;
 $screen-sm: 580px;
 $screen-xsm: 380px;
+
 
 @mixin respond($screen-size) {
   @media only screen and (max-width: $screen-size) {
@@ -40,11 +43,23 @@ $screen-xsm: 380px;
   line-height: 8rem;
   color: black;
   padding-left: 1em;
-   
-  @include respond($screen-lg) {
+
+  @include respond($screen-xl) {
+    margin-bottom: 0rem;
+    font-size: 4rem;
+    padding-left: 0em;
+  }
+
+  @include respond($screen-xxl) {
     margin-bottom: 0rem;
     font-size: 5rem;
-    padding-left: 0em;
+    padding-left: 2em;
+  }
+   
+  @include respond($screen-lg) {
+    margin-bottom: 4rem;
+    font-size: 5rem;
+    padding-left: 4em;
   }
   @include respond($screen-md) {
     margin-bottom: 4rem;
@@ -82,6 +97,11 @@ $screen-xsm: 380px;
   &__img {
     width: 200px;
     height: 200px;
+
+    @include respond($screen-xl) {
+      width: 150px;
+      height:   150px;
+    }
   }
 
   &__descriptor {
@@ -120,6 +140,10 @@ $screen-xsm: 380px;
     margin-right: 10rem;
     padding: 4rem 0;
 
+    @include respond($screen-xl) {
+      padding: 2rem 0;
+    }
+
     @include respond($screen-lg) {
       margin-right: 0;
     
@@ -138,6 +162,13 @@ $screen-xsm: 380px;
   &__text {
     width: 420px;
     font-size: 1.5rem;
+    @include respond($screen-xxl) {
+      font-size: 1rem;
+    }
+
+    @include respond($screen-xl) {
+      font-size: 1rem;
+    }
     
     @include respond($screen-lg) {
       margin-right: 0;
@@ -171,6 +202,16 @@ $screen-xsm: 380px;
     line-height: 2rem;
     color: rgb(0, 0, 0);
     margin: 30px 0;
+
+    @include respond($screen-xxl) {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
+
+    @include respond($screen-xl) {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+    }
     @include respond($screen-lg) {
       font-size: 1.5rem;
       line-height: 1.5rem;
@@ -208,6 +249,16 @@ $screen-xsm: 380px;
     flex-direction: column;
     text-align: center;
     
+    @include respond($screen-xxl) {
+      font-size: 0.8rem;
+      height: 80px;
+    }
+
+    @include respond($screen-xl) {
+      font-size: 0.5rem;
+      height: 50px;
+    }
+    
     @include respond($screen-lg) {
       font-size: 0.8rem;
       height: 80px;
@@ -231,6 +282,15 @@ $screen-xsm: 380px;
     text-align: center;
     margin: 10px;
     font-size: 1.5rem;
+
+    @include respond($screen-xxl) {
+      font-size: 1rem;
+    }
+
+    @include respond($screen-xl) {
+      font-size: 0.8rem;
+    }
+
     @include respond($screen-lg) {
       font-size: 1rem;
     }

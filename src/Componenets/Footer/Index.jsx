@@ -52,14 +52,14 @@ function VideoMaterial({ url }) {
                 </li>
               </ul>
             </div>
-            <div className ="col2">
+            {/* <div className ="col2">
               <p className="heading"></p>
               <ul>
                 <li>
                   
                 </li>
               </ul>
-            </div>
+            </div> */}
             <div className="col3">
               <p className="heading">My Email</p>
               <ul>

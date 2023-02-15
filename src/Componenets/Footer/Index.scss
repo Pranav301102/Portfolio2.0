@@ -1,6 +1,19 @@
+$screen-lg: 920px;
+$screen-md: 760px;
+$screen-sm: 580px;
+$screen-xsm: 380px;
+$screen-xxl: 1600px;
+$screen-xl: 1300px;
+
+@mixin respond($screen-size) {
+  @media only screen and (max-width: $screen-size) {
+    @content;
+  }
+}
+
+
 .footer{
     position: absolute;
-    
     color: white;
     display: block;
     bottom: 10px;
@@ -45,6 +58,51 @@
   .footer .heading{
     font-size: 16px;
     font-weight: 600;
+    @include respond($screen-xl) {
+      font-size: 10px;
+    }
+    @include respond($screen-xxl) {
+      font-size: 12px;
+    }
+    @include respond($screen-lg) {
+      font-size: 14px;
+    }
+    @include respond($screen-md) {
+      font-size: 12px;
+    }
+  
+    @include respond($screen-sm) {
+      font-size: 12px;
+    }
+  
+    @include respond($screen-xsm) {
+      font-size: 12px;
+    }
+  }
+
+  .footer li{
+    font-size: 20px;
+    font-weight: 600;
+    @include respond($screen-xl) {
+      font-size: 10px;
+    }
+    @include respond($screen-xxl) {
+      font-size: 12px;
+    }
+    @include respond($screen-lg) {
+      font-size: 14px;
+    }
+    @include respond($screen-md) {
+      font-size: 12px;
+    }
+  
+    @include respond($screen-sm) {
+      font-size: 12px;
+    }
+  
+    @include respond($screen-xsm) {
+      font-size: 12px;
+    }
   }
   
   .footer .main a{
@@ -55,6 +113,26 @@
     color: rgb(255, 255, 255);
     transition: ease 0.5s;
     text-decoration: none;
+    @include respond($screen-xl) {
+      font-size: 13px;
+    }
+    @include respond($screen-xxl) {
+      font-size: 15px;
+    }
+    @include respond($screen-lg) {
+      font-size: 24px;
+    }
+    @include respond($screen-md) {
+      font-size: 20px;
+    }
+  
+    @include respond($screen-sm) {
+      font-size: 18px;
+    }
+  
+    @include respond($screen-xsm) {
+      font-size: 17px;
+    }
   }
   
   .footer .main a:hover{

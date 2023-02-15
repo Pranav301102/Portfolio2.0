@@ -1,3 +1,5 @@
+$screen-xxl: 1600px;
+$screen-xl: 1300px;
 $screen-lg: 920px;
 $screen-md: 760px;
 $screen-sm: 580px;
@@ -18,6 +20,7 @@ $screen-xsm: 370px;
    flex-direction: column;
    flex-wrap: wrap;
 }
+
 .page-title-skill {
     display: flex;
     justify-content: center;
@@ -25,7 +28,14 @@ $screen-xsm: 370px;
     font-weight: 100;
     text-transform: uppercase;
     letter-spacing: -0.4px;
-    color: black;
+    color: rgb(0, 0, 0);
+
+    @include respond($screen-xl) {
+      font-size: 4rem;
+    }
+    @include respond($screen-xxl) {
+      font-size: 5rem;
+    }
     @include respond($screen-lg) {
       font-size: 4rem;
     }

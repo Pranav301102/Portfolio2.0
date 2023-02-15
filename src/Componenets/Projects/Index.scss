@@ -2,6 +2,8 @@ $screen-lg: 920px;
 $screen-md: 760px;
 $screen-sm: 580px;
 $screen-xsm: 380px;
+$screen-xxl: 1600px;
+$screen-xl: 1300px;
 
 @mixin respond($screen-size) {
     @media only screen and (max-width: $screen-size) {
@@ -32,8 +34,11 @@ $screen-xsm: 380px;
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  @include respond($screen-xl) {
+    margin-top: 3em;
+  }
   @include respond($screen-lg) {
-    margin-top:1em;
+    margin-top:10em;
   }
   @include respond($screen-md) {
     margin-top: 10em;
