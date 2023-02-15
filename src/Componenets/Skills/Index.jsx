@@ -14,14 +14,14 @@ export default function Skills() {
       <div id="buttom-line-skill"></div>
       <div className="Skills">
         <Skill value={88} src={'https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg'} />
-        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg'} />
-        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg'} />
-        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg'} />
-        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg'} />
-        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg'} />
-        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg'} />
-        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg'} />
-        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/n/94/nodejs-icon.svg'} />
+        <Skill value={88} src={"https://cdn.cdnlogo.com/logos/p/3/python.svg"} />
+        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/r/63/react.svg'} />
+        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/m/25/mongodb.svg'} />
+        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/j/22/java.svg'} />
+        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/t/14/typescript.svg'} />
+        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/m/10/mysql.svg'} />
+        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/c/1/c-plus-plus.svg'} />
+        <Skill value={88} src={'https://cdn.cdnlogo.com/logos/j/33/javascript.svg'} />
       </div>
     </div>
   )

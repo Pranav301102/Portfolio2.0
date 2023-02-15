@@ -93,7 +93,7 @@ $screen-xsm: 370px;
   }
 
 .img{
-  width : 30%;
+  width : 60%;
   @include respond($screen-lg) {
     width : 50%;
   }

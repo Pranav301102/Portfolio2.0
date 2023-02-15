@@ -34,7 +34,7 @@
           </Slide>
           <Slide>
             <img
-              src="zoro.jpg"
+              src="https://cdn.cdnlogo.com/logos/n/80/next-js.svg"
               height="175"
               width="175"
               alt=""
@@ -42,7 +42,7 @@
           </Slide>
           <Slide>
             <img
-              src="zoro.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Three.js_Icon.svg"
               height="175"
               width="175"
               alt=""
@@ -50,7 +50,23 @@
           </Slide>
           <Slide>
             <img
-              src="zoro.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/320px-Pandas_logo.svg.png"
+              height="175"
+              width="290"
+              alt=""
+            />
+          </Slide>
+          <Slide>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/03/Git_format.png"
+              height="175"
+              width="195"
+              alt=""
+            />
+          </Slide>
+          <Slide>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/01/Created_with_Matplotlib-logo.svg"
               height="175"
               width="175"
               alt=""
@@ -58,7 +74,7 @@
           </Slide>
           <Slide>
             <img
-              src="zoro.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
               height="175"
               width="175"
               alt=""
@@ -66,7 +82,7 @@
           </Slide>
           <Slide>
             <img
-              src="zoro.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg"
               height="175"
               width="175"
               alt=""
@@ -74,7 +90,7 @@
           </Slide>
           <Slide>
             <img
-              src="zoro.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
               height="175"
               width="175"
               alt=""
@@ -82,7 +98,7 @@
           </Slide>
           <Slide>
             <img
-              src="zoro.jpg"
+              src="https://upload.wikimedia.org/wikipedia/commons/1/10/PyTorch_logo_icon.svg"
               height="175"
               width="175"
               alt=""
@@ -90,31 +106,7 @@
           </Slide>
           <Slide>
             <img
-              src="zoro.jpg"
-              height="175"
-              width="175"
-              alt=""
-            />
-          </Slide>
-          <Slide>
-            <img
-              src="zoro.jpg"
-              height="175"
-              width="175"
-              alt=""
-            />
-          </Slide>
-          <Slide>
-            <img
-              src="zoro.jpg"
-              height="175"
-              width="175"
-              alt=""
-            />
-          </Slide>
-          <Slide>
-            <img
-              src="zoro.jpg"
+              src="https://www.freepnglogos.com/uploads/linux-png/file-icons-flat-linux-svg-wikimedia-commons-6.png"
               height="175"
               width="175"
               alt=""

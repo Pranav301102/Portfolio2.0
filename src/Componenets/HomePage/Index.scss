@@ -25,7 +25,7 @@ $screen-xsm: 380px;
   
     @include respond($screen-sm) {
         position: absolute;
-        font-size:1em ;
+        font-size:0.6em ;
         top:20%;
         left:20%;
     }
