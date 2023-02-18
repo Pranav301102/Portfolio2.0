@@ -5,12 +5,12 @@ import { Box, Line, meshBounds, Text, Shadow, Image, useTexture, Html } from "@r
 import "./Index.scss"
 
 const data = [
-  { img: "/zoro.jpg", name: "first", dsc: "1", stack: "node express" },
-  { img: "/zoro.jpg", name: "dadczczcs", dsc: "2", stack: "node express"},
-  { img: "/zoro.jpg", name: "dADacasfcsa", dsc: "3", stack: "node express mongodb" },
+  { img: "/1.jpg", name: "first", dsc: "1", stack: "node express" },
+  { img: "/2.jpg", name: "dadczczcs", dsc: "2", stack: "node express"},
+  { img: "/3.jpg", name: "dADacasfcsa", dsc: "3", stack: "node express mongodb" },
   { img: "/zoro.jpg", name: "faerascxsc", dsc: "4", stack: "node express" },
   { img: "/zoro.jpg", name: "dawrcsacsc", dsc: '5', stack: "node express" }, 
-  { img: "/zoro.jpg", name: "dAWDcacasc", dsc: "6", stack: "node express" } 
+  { img: "/4.jpg", name: "dAWDcacasc", dsc: "6", stack: "node express" } 
 ]
 
 function TextImage({ index, num ,data}) {
