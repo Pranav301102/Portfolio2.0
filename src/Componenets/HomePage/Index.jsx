@@ -9,7 +9,7 @@ import DistortionMaterial from "../../DistortionMaterial"
 import {  Box, } from "../../Styles"
 
 
-const square = new THREE.PlaneBufferGeometry(9,22,256,256)
+const square = new THREE.PlaneBufferGeometry(9,22,64,64)
 
 const material1 = new DistortionMaterial()
 

@@ -55,7 +55,7 @@ export default function App() {
         <Text />
       </Container>
       <Canvas  camera={{ position: [0, 0, 10], fov: 50 }}>
-      <ScrollControls damping={0.5} pages={6}>   
+      <ScrollControls damping={0.4} pages={6}>   
         <spotLight position={[-10, 30, 40]} />
         <spotLight position={[-60, 30, 40]} />
         <fog attach="fog" args={['white', 10, 20]} />

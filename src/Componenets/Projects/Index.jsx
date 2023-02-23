@@ -5,12 +5,12 @@ import { Box, Line, meshBounds, Text, Shadow, Image, useTexture, Html } from "@r
 import "./Index.scss"
 
 const data = [
-  { img: "/1.jpg", name: "first", dsc: "1", stack: "node express" },
-  { img: "/2.jpg", name: "dadczczcs", dsc: "2", stack: "node express"},
-  { img: "/3.jpg", name: "dADacasfcsa", dsc: "3", stack: "node express mongodb" },
-  { img: "/zoro.jpg", name: "faerascxsc", dsc: "4", stack: "node express" },
-  { img: "/zoro.jpg", name: "dawrcsacsc", dsc: '5', stack: "node express" }, 
-  { img: "/4.jpg", name: "dAWDcacasc", dsc: "6", stack: "node express" } 
+  { img: "/1.jpg", name: "Techithon", dsc: "College Fest website with RazorPay integration where you can register for events", stack: "Node.js Express.js React.js MongoDB AWS" },
+  { img: "/2.jpg", name: "Shop-N-Go", dsc: "A ML based self Checkout and ERP system for shops using python and Tensorflow", stack: "Python Tensorflow OpenCV Tkinter" },
+  { img: "/3.jpg", name: "Second Sight", dsc: "Andriod app that can identify day-to-day objects and give an audio output with voice command for visually impared", stack: "Java Python Tensorflow" },
+  { img: "/4.jpeg", name: "BlockSafe", dsc: 'Product Authentication system  using BlockChain For Manufacturer Seller and Byer', stack: "Node.js Express.js Ethereum Solidity MySQL" }, 
+  { img: "/5.jpg", name: "Abstract", dsc: "Market Place for Webgl Shaders and 3D-Models with Razorpay Integration", stack: "Node.js Express.js React.js MongoDB " },
+  { img: "/6.jpeg", name: "Self Driving Car", dsc: "A self driving car that stays on one lane and can be controlled remotly", stack: " Python Raspberry Pi OpenCV Flask" } 
 ]
 
 function TextImage({ index, num ,data}) {
@@ -25,13 +25,13 @@ function TextImage({ index, num ,data}) {
       <Text anchorX="left" position={[-0.5, w - 0.55, 0]} scale={2} color="white">
         0{index}
       </Text>
-      <Text  position={[2.6 + data.name.length*0.2, w, 0]} scale={0.8} color="white" > 
+      <Text  position={[2.2 + data.name.length*0.2, w, 0]} scale={0.8} color="white" > 
         {data.name.toUpperCase()}
       </Text>
       <Text  position={[3.7, w - 0.6, 0]} scale={0.3} color="white" maxWidth="12">
-        Stack : {data.stack}
+        STACK : {data.stack}
       </Text>
-      <Text position={[2.3, w - 5, 0]} scale={0.3} color="white">
+      <Text position={[2.4, w - 5.1, 0]} scale={0.3} color="white" maxWidth="20">
         {data.dsc}
       </Text>
       <Image ref={ref} url={data.img} scale={[6, 3, 2]} position={[2.4, 0, 0]} />
