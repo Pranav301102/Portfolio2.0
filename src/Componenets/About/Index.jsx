@@ -8,7 +8,7 @@ export default function AboutME(){
         <article className="content">
         <section className="content__descriptor">
           {/* <h2 class="content__title">Info</h2> */}
-          <img className="content__img" src = "zoro.jpg" alt='me'></img>
+          <img className="content__img" src = "zoro.jpeg" alt='me'></img>
         </section>
         <section className="content__text-box">
 

@@ -1,5 +1,5 @@
 @import url("https://rsms.me/inter/inter.css");
-
+@import url('https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -35,8 +35,9 @@ body {
   position: fixed;
   overflow: hidden;
   overscroll-behavior-y: none;
-  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial,
-    sans-serif;
+  font-family: -apple-system, Sulphur Point, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 

@@ -6,7 +6,7 @@ import "./Index.scss"
 
 const data = [
   { img: "/1.jpg", name: "Techithon", dsc: "College Fest website with RazorPay integration where you can register for events", stack: "Node.js Express.js React.js MongoDB AWS" },
-  { img: "/2.jpg", name: "Shop-N-Go", dsc: "A ML based self Checkout and ERP system for shops using python and Tensorflow", stack: "Python Tensorflow OpenCV Tkinter" },
+  { img: "/2.jpg", name: "Shop-N-Go", dsc: "A ML based self Checkout and ERP system for shops using python and Tensorflow", stack: "Python Tensorflow OpenCV " },
   { img: "/3.jpg", name: "Second Sight", dsc: "Andriod app that can identify day-to-day objects and give an audio output with voice command for visually impared", stack: "Java Python Tensorflow" },
   { img: "/4.jpeg", name: "BlockSafe", dsc: 'Product Authentication system  using BlockChain For Manufacturer Seller and Byer', stack: "Node.js Express.js Ethereum Solidity MySQL" }, 
   { img: "/5.jpg", name: "Abstract", dsc: "Market Place for Webgl Shaders and 3D-Models with Razorpay Integration", stack: "Node.js Express.js React.js MongoDB " },
