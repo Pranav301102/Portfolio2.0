@@ -13,7 +13,7 @@ export default function Fooback() {
   return (
     <mesh ref={ref} scale={[size[0]*0.17,size[1]*0.17,size[2]]} position={[-0,-47.7,9]} rotation={[0, 0, -Math.PI / 13]}>
       <planeGeometry/>  
-      <Suspense fallback={<FallbackMaterial url="10.jpg" />}>
+      <Suspense fallback={<FallbackMaterial url="6.jpeg" />}>
         <VideoMaterial url="10.mp4" />
       </Suspense>
     </mesh>

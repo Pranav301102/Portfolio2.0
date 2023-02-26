@@ -12,7 +12,7 @@ import { Group } from "three";
 function Word({ children, ...props }) {
   const color = new THREE.Color();
   const fontProps = {
-    font: "/Inter-Bold.woff",
+    
     fontSize: 0.4,
     letterSpacing: -0.05,
     lineHeight: 1,
