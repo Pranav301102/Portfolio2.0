@@ -80,7 +80,7 @@ export function Text() {
       <h1>I am Pranav</h1>
       <Typewriter
               options={{
-                strings: ["Full Stack Developer", "Crypto Enthusiast", "Student"],
+                strings: ["Full Stack Developer", "Data Scientist", "Student"],
                 autoStart: true,
                 loop: true,
                 delay: 50
