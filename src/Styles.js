@@ -51,17 +51,7 @@ const Cover = styled(a.div)`
   height: 120%;
 `
 
-function Nav(props) {
-  return (
-    <>
-      <NavRight {...props}>
-        <Link to="/">Torus</Link>
-        <Link to="/knot">Knot</Link>
-        <Link to="/bomb">Bomb</Link>
-      </NavRight>
-    </>
-  )
-}
+
 
 const Home = styled.div`
     height: 140vh ;
@@ -77,4 +67,4 @@ const Home = styled.div`
     }
 
 `
-export { Home,Container, Nav,  Line, Cover }
+export { Home,Container,  Line, Cover }

@@ -9,6 +9,7 @@ import DistortionMaterial from "../../DistortionMaterial"
 import {  Box, } from "../../Styles"
 
 
+
 const square = new THREE.PlaneBufferGeometry(9,22,64,64)
 
 const material1 = new DistortionMaterial()
@@ -70,14 +71,17 @@ export function Shapes({scroll, onScrollChange}){
   )
 }
 
-export function Text() {
-  
+export function Text() {  
   // Animated shape props
-  
   return (
+    <>
+
     <div className="box" >
       <h1>Hey</h1>
       <h1>I am Pranav</h1>
+      <h5 className="scroll__down">
+         Scroll Down 
+    </h5>
       <Typewriter
               options={{
                 strings: ["Full Stack Developer", "Data Scientist", "Student"],
@@ -87,6 +91,7 @@ export function Text() {
               }}
             />
     </div>
+    </>
   )
 }
 

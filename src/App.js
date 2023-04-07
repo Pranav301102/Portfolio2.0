@@ -16,6 +16,7 @@ import Skills, { Rects } from "./Componenets/Skills/Index"
 import Stars from "./Componenets/Stars/Index"
 import {Footer} from "./Componenets/Footer/Index"
 import Tech from "./Componenets/Tech/Index"
+import Navbar from "./Componenets/Navbar"
 
 function Background({ color }) {
   const scroll = useScroll()
@@ -54,6 +55,7 @@ export default function App() {
       <Container style={props}>  
         <Text />
       </Container>
+      <Navbar/>
       <Canvas  camera={{ position: [0, 0, 10], fov: 50 }}>
       <ScrollControls damping={0.4} pages={6}>   
         <spotLight position={[-10, 30, 40]} />

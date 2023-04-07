@@ -9,6 +9,29 @@ $screen-xsm: 380px;
     }
   }
 
+
+
+  .scroll__down {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    gap: 5rem;
+    right: 29rem;
+    bottom: 9rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 1.4rem;
+  }
+
+  .scroll__down::after{
+    transform: rotate(90deg);
+    content: "";
+    width: 1px;
+    height: 5rem;
+    background: #000000;
+  }
+
   .box {
     position: absolute;
     font-size:1em ;

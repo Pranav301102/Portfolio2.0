@@ -16,8 +16,36 @@ $screen-xl: 1300px;
     position: absolute;
     color: white;
     display: block;
-    bottom: 10px;
+    bottom: 50px;
     width: 100%;
+    @include respond($screen-lg) {
+      position: absolute;
+      color: white;
+      display: block;
+      bottom: 50px;
+      width: 100%;
+    }
+    @include respond($screen-md) {
+      position: absolute;
+      color: white;
+      display: block;
+      bottom: 200px;
+      width: 100%;
+    }
+    @include respond($screen-sm) {
+      position: absolute;
+      color: white;
+      display: block;
+      bottom: 350px;
+      width: 100%;
+    }
+    @include respond($screen-xsm) {
+      position: absolute;
+      color: white;
+      display: block;
+      bottom: 350px;
+      width: 100%;
+    }
   }
   
   .footer .main{
