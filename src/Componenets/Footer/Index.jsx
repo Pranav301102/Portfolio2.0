@@ -70,7 +70,7 @@ function VideoMaterial({ url }) {
             </div>
           </div>
           <div className="bottom">
-            <p className="copyright">© Pranav Trivei. All rights reserved.</p>
+            <p className="copyright">©Pranav Trivedi. All rights reserved.</p>
           </div>
           </div>
         </>

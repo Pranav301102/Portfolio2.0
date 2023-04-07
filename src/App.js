@@ -18,6 +18,7 @@ import { Footer } from "./Componenets/Footer/Index"
 import Tech from "./Componenets/Tech/Index"
 import Navbar from "./Componenets/Navbar"
 
+
 function Background({ color }) {
   const scroll = useScroll()
   const tcolor = new THREE.Color()
@@ -55,7 +56,9 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    if (width < 768) {
+    if (width === 0){
+    }
+    else if (width < 768) {
       //pop up to view on pc or laptop
       alert("Please view on a PC or Laptop for best experience")
     }
