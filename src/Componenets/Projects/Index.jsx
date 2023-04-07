@@ -6,11 +6,11 @@ import "./Index.scss"
 
 const data = [
   { img: "/1.jpg", name: "Techithon", dsc: "College Fest website with RazorPay integration where you can register for events", stack: "Node.js Express.js React.js MongoDB AWS" },
-  { img: "/2.jpg", name: "Shop-N-Go", dsc: "A ML based self Checkout and ERP system for shops using python and Tensorflow", stack: "Python Tensorflow OpenCV " },
+  { img: "/2.jpg", name: "Shop-N-Go", dsc: "A ML based self Checkout and inventory management system for shops using Tensorflow.js and React", stack: "Python Tensorflow OpenCV " },
   { img: "/3.jpg", name: "Second Sight", dsc: "Andriod app that can identify day-to-day objects and give an audio output with voice command for visually impared", stack: "Java Python Tensorflow" },
-  { img: "/4.jpeg", name: "BlockSafe", dsc: 'Product Authentication system  using BlockChain For Manufacturer Seller and Byer', stack: "Node.js Express.js Ethereum Solidity MySQL" }, 
+  { img: "/4.jpeg", name: "ChainFund", dsc: 'CrowdFunding platform for investors with a coupon system', stack: "React.js ThirdWeb Ethereum Solidity" }, 
   { img: "/5.jpg", name: "Abstract", dsc: "Market Place for Webgl Shaders and 3D-Models with Razorpay Integration", stack: "Node.js Express.js React.js MongoDB " },
-  { img: "/6.jpeg", name: "Self Driving Car", dsc: "A self driving car that stays on one lane and can be controlled remotly", stack: " Python Raspberry Pi OpenCV Flask" } 
+  { img: "/6.jpeg", name: "Scan X", dsc: "A fast and opensource website audit tool", stack: " Python fastAPI MongoDB React.js" } 
 ]
 
 function TextImage({ index, num ,data}) {
@@ -118,7 +118,7 @@ export default function Project() {
 export function ProjectTitle() {
   return (
     <>
-      <div className="Project-Title">
+      <div className="Project-Title" id="projects">
         <div id="upper-line"></div>
         <h1 id="title">Projects</h1>
         <div id="bottom-line"></div>

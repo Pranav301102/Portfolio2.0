@@ -14,13 +14,14 @@ export default function AboutME(){
 
 
           <p className="content__text">
-            We aim to be the investors we wished we had when we started out.
-            Lightning-fast, always on your side and fundamentally helpful.
+          Hi, I'm a full stack software developer who loves to contribute to open source projects. 
+          I enjoy working with different technologies and learning new skills. 
+          I'm always looking for new challenges and opportunities to grow as a developer. 
+
           </p>
           <p className="content__text">
-            Our knowledge is your knowledge. Our network is your network. Your
-            problems are our problems. We don't have all the answers, but we
-            will help you find them.
+          When I'm not coding, you can find me listening to music or playing badminton with my friends. 
+          I'm passionate about creating software that makes a positive impact on the world.
           </p>
         </section>
         </article>
@@ -40,7 +41,7 @@ export default function AboutME(){
           <h1 className="Achievements__title">Education</h1>
           <div className="Achievements__container">  
           <div className="Achievements__achivement">
-          <h3>B.Tech Information Technology</h3>
+          <h3>B.E. Information Technology</h3>
               Atharva College of Engineering(2024), Mumbai
           </div> 
           </div>

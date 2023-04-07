@@ -55,7 +55,7 @@ export default function App() {
       <Container style={props}>  
         <Text />
       </Container>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Canvas  camera={{ position: [0, 0, 10], fov: 50 }}>
       <ScrollControls damping={0.4} pages={6}>   
         <spotLight position={[-10, 30, 40]} />
@@ -76,15 +76,14 @@ export default function App() {
         </Scroll>
         <Scroll html>
         <MainContainer>
-        <Home/>
-        <AboutME/>
-        <Skills/>
+        <Home id="home"/>
+        <AboutME id="about"/>
+        <Skills id="skill"/>
         <Tech/>
-        <ProjectTitle/>
-        <Footer/>
+        <ProjectTitle />
+        <Footer id="footer"/>
         </MainContainer>
         </Scroll>
-        
         </ScrollControls>
       </Canvas>
       <Loader />
