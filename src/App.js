@@ -42,7 +42,7 @@ export default function App() {
     opacity: scroll < 0.1 ? 1 : 0,
   })
 
-  const [width, setWidth] = useState < number > window.innerWidth
+  const [width, setWidth] = useState(0)
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth)
